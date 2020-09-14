@@ -7,16 +7,166 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-    <title>Hello, world!</title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/stylesheet.css">
+    <title>Patient Portal</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+   <!-- Side navigation -->
+	<div class="sidenav">
+		<div class="rectangle">
+			<h1>Patient Portal</h1>
+		</div>
+		<br>
+		<br>
+		<div id="navigation" class="table">
+			<div class="row">
+				<div class="cell buttonWithUnderline">
+					<div class="openCircle"></div>
+				</div>
+				<div class="cell buttonWithUnderline">
+					<button class="link" onclick="loadView(this.innerText)">
+						Upcoming Appointments
+					</button>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="cell">
+					<div class="openCircle"></div>
+				</div>
+				<div class="cell">
+					<button class="link" onclick="loadView(this.innerText)">
+						General Information
+					</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<div class="cell-divider"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<div class="openCircle"></div>
+				</div>
+				<div class="cell">
+					<button class="link" onclick="loadView(this.innerText)">
+						Personal Health History
+					</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<div class="cell-divider"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<div class="openCircle"></div>
+				</div>
+				<div class="cell">
+					<button class="link" onclick="loadView(this.innerText)">
+						Medical History
+					</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<div class="cell-divider"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<div class="openCircle"></div>
+				</div>
+				<div class="cell">
+					<button class="link" onclick="loadView(this.innerText)">
+						Family Medical History
+					</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<div class="cell-divider"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<div class="openCircle"></div>
+				</div>
+				<div class="cell">
+					<button class="link" onclick="loadView(this.innerText)">
+						Social History
+					</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<div class="cell-divider"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<div class="openCircle"></div>
+				</div>
+				<div class="cell">
+					<button class="link" onclick="loadView(this.innerText)">
+						Personal Safety
+					</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<div class="cell-divider"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cell">
+					<div class="openCircle"></div>
+				</div>
+				<div class="cell">
+					<button class="link" onclick="loadView(this.innerText)">
+						Other Information
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Page content -->
+	<div class="main">
+		<section class="section" id="upcommingAppointments">
+			<h2>Upcoming Appointments</h2>
+		</section>
+		<section class="section" id="generalInformation">
+			<h2>General Information</h2>
+		</section>
+		<section class="section" id="personalHealthHistory">
+			<h2>Personal Health History</h2>
+		</section>
+		<section class="section" id="medicalHistory">
+			<h2>Medical History</h2>
+		</section>
+		<section class="section" id="familyMedicalHistory">
+			<h2>Family Medical History</h2>
+		</section>
+		<section class="section" id="socialHistory">
+			<h2>Social History</h2>
+		</section>
+		<section class="section" id="personalSafety">
+			<h2>Personal Safety</h2>
+		</section>
+		<section class="section" id="otherInformation">
+			<h2>Other Information</h2>
+		</section>
+	</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<script src="js/view.js"></script>
   </body>
 </html>
