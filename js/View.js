@@ -1,6 +1,8 @@
 /* VIEW JS */
 
 $( document ).ready(function() {
+	$('body').bootstrapMaterialDesign();
+
 	//Load this page on intialize
    loadView("Upcoming Appointments");
 });
