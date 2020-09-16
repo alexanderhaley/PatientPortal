@@ -144,33 +144,122 @@
 		<section class="section" id="upcommingAppointments">
 			<h2>Upcoming Appointments</h2>
 		</section>
-		<section class="section" id="generalInformation">
+		<section class="section container" id="generalInformation">
 			<h2>General Information</h2>
-			<form>
-				<div class="form-group">
-					<label for="firstName" class="bmd-label-floating">First Name</label>
-					<input type="text" class="form-control" id="firstName">
-				</div>
-				<div class="form-group">
-					<label for="lastName" class="bmd-label-floating">Last Name</label>
-					<input type="text" class="form-control" id="lastName">
-				</div>
-				<p>Are you currently deceased?</p>
-				<div class="form-group">
-					<div class="radio">
-						<label>
-							<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-							Yes
-						</label>
-					</div>
-					<div class="radio">
-						<label>
-							<input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-							No
-						</label>
+			<div class="row">
+				<div class="col">
+					<div class="form-group">
+						<label for="firstName" class="bmd-label-floating">First Name</label>
+						<input type="text" class="form-control" id="firstName">
 					</div>
 				</div>
-			</form>
+				<div class="col">
+					<div class="form-group">
+						<label for="lastName" class="bmd-label-floating">Last Name</label>
+						<input type="text" class="form-control" id="lastName">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="bmd-form-group">
+						<label for="birthDay">Birthday</label>
+						<input type="text" class="form-control" id="birthDay" placeholder="00/00/0000">
+					</div>
+				</div>
+				<div class="col form-inline form-group">
+					<p class="px-2">Gender:</p>
+					<div class="px-2">
+						<label class="radio-inline">
+							<input type="radio" name="genderOptions" value="Male">
+							Male
+						</label>
+					</div>
+					<div class="px-2">
+						<label class="radio-inline">
+							<input type="radio" name="genderOptions" value="Female">
+							Female
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="form-inline form-group">
+					<p class="px-2">Marital Status:</p>
+					<div class="px-2">
+						<label class="radio-inline">
+							<input type="radio" name="maritalStatusOptions" value="Male">
+							Single
+						</label>
+					</div>
+					<div class="px-2">
+						<label class="radio-inline">
+							<input type="radio" name="maritalStatusOptions" value="Female">
+							Partnered
+						</label>
+					</div>
+					<div class="px-2">
+						<label class="radio-inline">
+							<input type="radio" name="maritalStatusOptions" value="Female">
+							Married
+						</label>
+					</div>
+					<div class="px-2">
+						<label class="radio-inline">
+							<input type="radio" name="maritalStatusOptions" value="Female">
+							Separated
+						</label>
+					</div>
+					<div class="px-2">
+						<label class="radio-inline">
+							<input type="radio" name="maritalStatusOptions" value="Female">
+							Divorced
+						</label>
+					</div>
+					<div class="px-2">
+						<label class="radio-inline">
+							<input type="radio" name="maritalStatusOptions" value="Female">
+							Widowed
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="form-group">
+						<label for="Email" class="bmd-label-floating">Email</label>
+						<input type="email" class="form-control" id="Email">
+					</div>
+				</div>
+				<div class="col">
+					<div class="form-group">
+						<label for="phoneNumber" class="bmd-label-floating">Phone number</label>
+						<input type="text" class="form-control" id="phoneNumber">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<div class="form-group">
+						<label for="occupation" class="bmd-label-floating">Occupation is / was</label>
+						<input type="text" class="form-control" id="occupation">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="form-group">
+						<label for="referringDoctor" class="bmd-label-floating">Previous or referring doctor</label>
+						<input type="text" class="form-control" id="referringDoctor">
+					</div>
+				</div>
+				<div class="col">
+					<div class="form-group">
+						<label for="todaysDate" class="bmd-label-floating">Today's Date</label>
+						<input type="text" class="form-control" id="todaysDate">
+					</div>
+				</div>
+			</div>
 		</section>
 		<section class="section" id="personalHealthHistory">
 			<h2>Personal Health History</h2>
