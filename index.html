@@ -97,7 +97,7 @@
 			</div>
 			<div class="row">
 				<div class="cell">
-					<div class="openCircle"></div>
+					<div id="socialHistory_circle" class="openCircle"></div>
 				</div>
 				<div class="cell">
 					<button class="link" onclick="loadView(this.innerText);">
@@ -480,6 +480,213 @@
 		</section>
 		<section class="section" id="socialHistory">
 			<h2>Social History</h2>
+			<div class="centerSection">
+				<h3>Exercise</h3>
+				<div class="row">
+					<div class="col form-inline">
+						<p>Do you exercise?</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="exerciseOptions">
+								No
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="exerciseOptions">
+								Yes
+							</label>
+						</div>
+					</div>
+					<div class="col form-inline">
+						<p class="text-right max-width">If yes, how many minutes per week?</p>
+					</div>
+					<div class="col-2">
+						<input type="text" class="form-control" placeholder="00:00">
+					</div>
+				</div>
+			</div>
+			<div class="centerSection">
+				<h3>Diet</h3>
+				<div class="row">
+					<div class="col form-inline">
+						<p>Are you dieting?</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="dietOptions">
+								No
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="dietOptions">
+								Yes
+							</label>
+						</div>
+					</div>
+					<div class="col form-inline">
+						<p class="text-right max-width"># of meals a day?</p>
+					</div>
+					<div class="col-1">
+						<input type="text" class="form-control" id="mealsPerDays" placeholder="0">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-7">
+						<p style="display: inline;">Do you drink caffeine?</p>
+						<input type="checkbox" id='caffeine1' class='chk-btn' />
+						<label for='caffeine1'>No</label>
+						
+						<input type="checkbox" id='caffeine2' class='chk-btn' />
+						<label for='caffeine2'>Coffee</label>
+						
+						<input type="checkbox" id='caffeine3' class='chk-btn' />
+						<label for='caffeine3'>Tea</label>
+						
+						<input type="checkbox" id='caffeine4' class='chk-btn' />
+						<label for='caffeine4'>Cola</label>
+					</div>
+					<div class="col form-inline">
+						<p class="text-right max-width">If yes, # of cups a day?</p>
+					</div>
+					<div class="col-1">
+						<input type="text" class="form-control" placeholder="0">
+					</div>
+				</div>
+			</div>
+			<div class="centerSection">
+				<h3>Alcohol</h3>
+				<div class="row">
+					<div class="col form-inline">
+						<p>Do you drink alcohol?</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="alcoholOptions">
+								No
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="alcoholOptions">
+								Yes
+							</label>
+						</div>
+					</div>
+					<div class="col form-inline">
+						<p class="text-right max-width">If yes, # of drinks per week?</p>
+					</div>
+					<div class="col-1">
+						<input type="text" class="form-control" placeholder="0">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col form-inline">
+						<p>Are you concerned about the amount you drink?</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="amountDrinkConcernOptions">
+								No
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="amountDrinkConcernOptions">
+								Yes
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col form-inline">
+						<p>Are you prone to "binge" drinking?</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="bingeDrinking">
+								No
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="bingeDrinking">
+								Yes
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col form-inline">
+						<p>Do you drive after drinking?</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="DUI">
+								No
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="DUI">
+								Yes
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="centerSection">
+				<h3>Tobacco</h3>
+				<div class="row">
+					<div class="col form-inline">
+						<p>Do you use tobacco?</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="tobaccoOptions">
+								No
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="tobaccoOptions">
+								Yes
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-5 form-inline form-group">
+						<p class="mr-3">If yes, # of cigarettes per week?</p>
+						<input type="text" class="form-control size1" placeholder="0">
+					</div>
+					<div class="col form-inline form-group">
+						<p class="mr-3">If yes, chew per week?</p>
+						<input type="text" class="form-control size1" placeholder="0">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-5 form-inline form-group">
+						<p class="mr-3">If yes, # of cigars per week?</p>
+						<input type="text" class="form-control size1" placeholder="0">
+					</div>
+					<div class="col form-inline form-group">
+						<p class="mr-3">If yes, # of pipes per week?</p>
+						<input type="text" class="form-control size1" placeholder="0">
+					</div>
+				</div>
+				<h3></h3>
+				<div class="row">
+					<div class="col-4 form-inline form-group">
+						<p class="mr-3">If yes, # of years?</p>
+						<input type="text" class="form-control size1" placeholder="00">
+					</div>
+					<div class="col form-inline form-group">
+						<p class="mr-3">Previous tobacco user - year quit</p>
+						<input type="text" class="form-control size2" placeholder="0000">
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<button  type="button" class="button" onclick="loadView('Family Medical History')">Save and back to Family Medical History</button>
+				<button  type="button" class="button primary" onclick="loadView('Personal Safety'); markAsSaved('Social History')">Save and continue to Personal Safety</button>
+			</div>
 		</section>
 		<section class="section" id="personalSafety">
 			<h2>Personal Safety</h2>
