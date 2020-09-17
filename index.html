@@ -4,10 +4,9 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-		<!-- Material Design for Bootstrap fonts and icons -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-
+		
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+		
 		<!-- Material Design for Bootstrap CSS -->
 		<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
@@ -30,7 +29,7 @@
 					<div class="openCircle"></div>
 				</div>
 				<div class="cell buttonWithUnderline">
-					<button class="link" onclick="loadView(this.innerText)">
+					<button class="link" onclick="loadView(this.innerText);">
 						Upcoming Appointments
 					</button>
 				</div>
@@ -38,10 +37,10 @@
 			<br>
 			<div class="row">
 				<div class="cell">
-					<div class="openCircle"></div>
+					<div id="generalInformation_circle" class="openCircle"></div>
 				</div>
 				<div class="cell">
-					<button class="link" onclick="loadView(this.innerText)">
+					<button class="link" onclick="loadView(this.innerText);">
 						General Information
 					</button>
 				</div>
@@ -53,10 +52,10 @@
 			</div>
 			<div class="row">
 				<div class="cell">
-					<div class="openCircle"></div>
+					<div id="personalHealthHistory_circle" class="openCircle"></div>
 				</div>
 				<div class="cell">
-					<button class="link" onclick="loadView(this.innerText)">
+					<button class="link" onclick="loadView(this.innerText);">
 						Personal Health History
 					</button>
 				</div>
@@ -68,10 +67,10 @@
 			</div>
 			<div class="row">
 				<div class="cell">
-					<div class="openCircle"></div>
+					<div id="medicalHistory_circle" class="openCircle"></div>
 				</div>
 				<div class="cell">
-					<button class="link" onclick="loadView(this.innerText)">
+					<button class="link" onclick="loadView(this.innerText);">
 						Medical History
 					</button>
 				</div>
@@ -86,7 +85,7 @@
 					<div class="openCircle"></div>
 				</div>
 				<div class="cell">
-					<button class="link" onclick="loadView(this.innerText)">
+					<button class="link" onclick="loadView(this.innerText);">
 						Family Medical History
 					</button>
 				</div>
@@ -101,7 +100,7 @@
 					<div class="openCircle"></div>
 				</div>
 				<div class="cell">
-					<button class="link" onclick="loadView(this.innerText)">
+					<button class="link" onclick="loadView(this.innerText);">
 						Social History
 					</button>
 				</div>
@@ -116,7 +115,7 @@
 					<div class="openCircle"></div>
 				</div>
 				<div class="cell">
-					<button class="link" onclick="loadView(this.innerText)">
+					<button class="link" onclick="loadView(this.innerText);">
 						Personal Safety
 					</button>
 				</div>
@@ -131,7 +130,7 @@
 					<div class="openCircle"></div>
 				</div>
 				<div class="cell">
-					<button class="link" onclick="loadView(this.innerText)">
+					<button class="link" onclick="loadView(this.innerText);">
 						Other Information
 					</button>
 				</div>
@@ -146,126 +145,335 @@
 		</section>
 		<section class="section container" id="generalInformation">
 			<h2>General Information</h2>
-			<div class="row">
-				<div class="col">
-					<div class="form-group">
-						<label for="firstName" class="bmd-label-floating">First Name</label>
-						<input type="text" class="form-control" id="firstName">
+			<div class="centerSection">
+				<div class="row">
+					<div class="col">
+						<div class="form-group">
+							<label for="firstName" class="bmd-label-floating">First Name</label>
+							<input type="text" class="form-control" id="firstName">
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-group">
+							<label for="lastName" class="bmd-label-floating">Last Name</label>
+							<input type="text" class="form-control" id="lastName">
+						</div>
 					</div>
 				</div>
-				<div class="col">
-					<div class="form-group">
-						<label for="lastName" class="bmd-label-floating">Last Name</label>
-						<input type="text" class="form-control" id="lastName">
+				<div class="row">
+					<div class="col">
+						<div class="bmd-form-group">
+							<label for="birthDay">Birthday</label>
+							<input type="date" class="form-control" id="birthDay" placeholder="MM/DD/YYYY">
+						</div>
+					</div>
+					<div class="col form-inline form-group">
+						<p class="px-2">Gender:</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="genderOptions" value="Male">
+								Male
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="genderOptions" value="Female">
+								Female
+							</label>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<div class="bmd-form-group">
-						<label for="birthDay">Birthday</label>
-						<input type="text" class="form-control" id="birthDay" placeholder="00/00/0000">
+				<div class="row">
+					<div class="form-inline form-group">
+						<p class="px-2">Marital Status:</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="maritalStatusOptions" value="Male">
+								Single
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="maritalStatusOptions" value="Female">
+								Partnered
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="maritalStatusOptions" value="Female">
+								Married
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="maritalStatusOptions" value="Female">
+								Separated
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="maritalStatusOptions" value="Female">
+								Divorced
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="maritalStatusOptions" value="Female">
+								Widowed
+							</label>
+						</div>
 					</div>
 				</div>
-				<div class="col form-inline form-group">
-					<p class="px-2">Gender:</p>
-					<div class="px-2">
-						<label class="radio-inline">
-							<input type="radio" name="genderOptions" value="Male">
-							Male
-						</label>
+				<div class="row">
+					<div class="col">
+						<div class="form-group">
+							<label for="Email" class="bmd-label-floating">Email</label>
+							<input type="email" class="form-control" id="Email">
+						</div>
 					</div>
-					<div class="px-2">
-						<label class="radio-inline">
-							<input type="radio" name="genderOptions" value="Female">
-							Female
-						</label>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="form-inline form-group">
-					<p class="px-2">Marital Status:</p>
-					<div class="px-2">
-						<label class="radio-inline">
-							<input type="radio" name="maritalStatusOptions" value="Male">
-							Single
-						</label>
-					</div>
-					<div class="px-2">
-						<label class="radio-inline">
-							<input type="radio" name="maritalStatusOptions" value="Female">
-							Partnered
-						</label>
-					</div>
-					<div class="px-2">
-						<label class="radio-inline">
-							<input type="radio" name="maritalStatusOptions" value="Female">
-							Married
-						</label>
-					</div>
-					<div class="px-2">
-						<label class="radio-inline">
-							<input type="radio" name="maritalStatusOptions" value="Female">
-							Separated
-						</label>
-					</div>
-					<div class="px-2">
-						<label class="radio-inline">
-							<input type="radio" name="maritalStatusOptions" value="Female">
-							Divorced
-						</label>
-					</div>
-					<div class="px-2">
-						<label class="radio-inline">
-							<input type="radio" name="maritalStatusOptions" value="Female">
-							Widowed
-						</label>
+					<div class="col">
+						<div class="form-group">
+							<label for="phoneNumber" class="bmd-label-floating">Phone number</label>
+							<input type="text" class="form-control" id="phoneNumber">
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<div class="form-group">
-						<label for="Email" class="bmd-label-floating">Email</label>
-						<input type="email" class="form-control" id="Email">
+				<div class="row">
+					<div class="col">
+						<div class="form-group">
+							<label for="occupation" class="bmd-label-floating">Occupation is / was</label>
+							<input type="text" class="form-control" id="occupation">
+						</div>
 					</div>
 				</div>
-				<div class="col">
-					<div class="form-group">
-						<label for="phoneNumber" class="bmd-label-floating">Phone number</label>
-						<input type="text" class="form-control" id="phoneNumber">
+				<div class="row">
+					<div class="col">
+						<div class="form-group">
+							<label for="referringDoctor" class="bmd-label-floating">Previous or referring doctor</label>
+							<input type="text" class="form-control" id="referringDoctor">
+						</div>
+					</div>
+					<div class="col">
+						<div class="form-group">
+							<label for="todaysDate" class="bmd-label-floating">Today's Date</label>
+							<input type="text" class="form-control" id="todaysDate">
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-6">
-					<div class="form-group">
-						<label for="occupation" class="bmd-label-floating">Occupation is / was</label>
-						<input type="text" class="form-control" id="occupation">
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<div class="form-group">
-						<label for="referringDoctor" class="bmd-label-floating">Previous or referring doctor</label>
-						<input type="text" class="form-control" id="referringDoctor">
-					</div>
-				</div>
-				<div class="col">
-					<div class="form-group">
-						<label for="todaysDate" class="bmd-label-floating">Today's Date</label>
-						<input type="text" class="form-control" id="todaysDate">
-					</div>
+				<div style="margin-top:100px; text-align:right">
+					<button  type="button" class="button primary" onclick="loadView('Personal Health History'); markAsSaved('General Information')">Save and continue to Personal Health History</button>
 				</div>
 			</div>
 		</section>
 		<section class="section" id="personalHealthHistory">
 			<h2>Personal Health History</h2>
+			<div class="centerSection">
+				<h3>Childhood Illnesses</h3>
+				<div class="row">
+					<div class="col">
+						<input type="checkbox" id='c1' class='chk-btn' />
+						<label for='c1'>Measles</label>
+						
+						<input type="checkbox" id='c2' class='chk-btn' />
+						<label for='c2'>Mumps</label>
+						
+						<input type="checkbox" id='c3' class='chk-btn' />
+						<label for='c3'>Ruella</label>
+						
+						<input type="checkbox" id='c4' class='chk-btn' />
+						<label for='c4'>Chickenpox</label>
+						
+						<input type="checkbox" id='c5' class='chk-btn' />
+						<label for='c5'>Rheumatic Fever</label>
+						
+						<input type="checkbox" id='c6' class='chk-btn' />
+						<label for='c6'>Polio</label>
+					</div>
+				</div>
+			</div>
+			<div class="centerSection">
+				<h3>Immunizations &amp; Dates</h3>
+				<div class="row">
+					<div class="col">
+						<div class="table">
+							<div class="row">
+								<div class="cell align-left">
+									<input type="checkbox">
+								</div>
+								<div class="cell align-left">
+									<input type="text" class="form-control" placeholder="Tetnaus">
+								</div>
+								
+								<div class="cell align-left">
+									<input type="checkbox">
+								</div>
+								<div class="cell align-left">
+									<input type="text" class="form-control" placeholder="Hepatitis B">
+								</div>
+								
+								<div class="cell align-left">
+									<input type="checkbox">
+								</div>
+								<div class="cell align-left">
+									<input type="text" class="form-control" placeholder="MMR">
+								</div>
+							</div>
+							<div class="row">
+								<div class="cell align-left">
+									<input type="checkbox">
+								</div>
+								<div class="cell align-left">
+									<input type="text" class="form-control" placeholder="Pneumonia">
+								</div>
+								
+								<div class="cell align-left">
+									<input type="checkbox">
+								</div>
+								<div class="cell align-left">
+									<input type="text" class="form-control" placeholder="Chickenpox">
+								</div>
+								
+								<div class="cell align-left">
+									<input type="checkbox">
+								</div>
+								<div class="cell align-left">
+									<input type="text" class="form-control" placeholder="Meningococcal">
+								</div>
+							</div>
+							<div class="row">
+								<div class="cell align-left">
+									<input type="checkbox">
+								</div>
+								<div class="cell align-left">
+									<input type="text" class="form-control" placeholder="Hepatitis A">
+								</div>
+								
+								<div class="cell align-left">
+									<input type="checkbox">
+								</div>
+								<div class="cell align-left">
+									<input type="text" class="form-control" placeholder="Influenza">
+								</div>
+								
+								<div class="cell align-left">
+									<input type="checkbox">
+								</div>
+								<div class="cell align-left">
+									<div style="margin-top:8px">None</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="centerSection">
+				<h3>Test &amp; Screening Dates</h3>
+				<div class="table">
+					<div class="row">
+						<div class="col">
+							<div class="table">
+								<div class="row">
+									<div class="cell align-left">
+										<input type="checkbox">
+									</div>
+									<div class="cell align-left">
+										<input type="text" class="form-control" placeholder="Eye Exam">
+									</div>
+									
+									<div class="cell align-left">
+										<input type="checkbox">
+									</div>
+									<div class="cell align-left">
+										<input type="text" class="form-control" placeholder="Colonoscopy">
+									</div>
+									
+									<div class="cell align-left">
+										<input type="checkbox">
+									</div>
+									<div class="cell align-left">
+										<input type="text" class="form-control" placeholder="Dexa Scan">
+									</div>
+								</div>							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="centerSection">
+				<h3>Surgeries</h3>
+				<div class="table">
+					<div class="row">
+						<div class="cell align-left">
+							<div class="form-group">
+								<input type="text" style="width:80px" placeholder="Year" class="form-control">
+							</div>
+						</div>
+						<div class="cell align-left" style="width:50%">
+							<div class="form-group">
+								<input type="text" placeholder="Reason" class="form-control">
+							</div>
+						</div>
+						<div class="cell align-left">
+							<div class="form-group">
+								<input type="text" placeholder="Hospital" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell align-left">
+							<div class="form-group">
+								<input type="text" style="width:80px" placeholder="Year" class="form-control">
+							</div>
+						</div>
+						<div class="cell align-left" style="width:50%">
+							<div class="form-group">
+								<input type="text" placeholder="Reason" class="form-control">
+							</div>
+						</div>
+						<div class="cell align-left">
+							<div class="form-group">
+								<input type="text" placeholder="Hospital" class="form-control">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell align-left">
+							<div class="form-group">
+								<input type="text" style="width:80px" placeholder="Year" class="form-control">
+							</div>
+						</div>
+						<div class="cell align-left" style="width:50%">
+							<div class="form-group">
+								<input type="text" placeholder="Reason" class="form-control">
+							</div>
+						</div>
+						<div class="cell align-left">
+							<div class="form-group">
+								<input type="text" placeholder="Hospital" class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+				<input type="checkbox"> No surgeries
+			</div>
+			<div class="footer">
+				<button  type="button" class="button" onclick="loadView('General Information')">Save and back to General Information</button>
+				<button  type="button" class="button primary" onclick="loadView('Medical History'); markAsSaved('Personal Health History')">Save and continue to Medical Health History</button>
+			</div>
 		</section>
 		<section class="section" id="medicalHistory">
 			<h2>Medical History</h2>
+			<div class="centerSection">
+				<h3>Please check all that apply.</h3>
+				<div id="yourDiseases"></div>
+				<br>
+				<br>
+				<textarea class="form-control" placeholder="Other medical conditions"></textarea>
+			</div>
+			<div class="footer">
+				<button  type="button" class="button" onclick="loadView('Personal Health History')">Save and back to Personal Health History</button>
+				<button  type="button" class="button primary" onclick="loadView('Family Medical History'); markAsSaved('Medical History')">Save and continue to Family Medical History</button>
+			</div>
 		</section>
 		<section class="section" id="familyMedicalHistory">
 			<h2>Family Medical History</h2>
