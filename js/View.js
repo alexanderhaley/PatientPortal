@@ -3,13 +3,92 @@
 $( document ).ready(function() {
 	$('body').bootstrapMaterialDesign();
 
-	//Load this page on intialize
-	// showSidenav();
-	// loadView("Medical History");
+	setupLoginPageLogic();
 });
 
+function showMain () {
+	$("div.main").show();
+}
+
+function hideLoginPage (callback) {
+	$("div.loginPage").fadeOut(300, callback);
+}
+
 function showSidenav () {
-	$("div.sidenav").show();
+	$("div.sidenav").fadeIn();
+}
+
+/**
+ * We can choose what page to load based on what code the user enters
+ */
+function clickedLoginContinue () {
+	var code = getLoginPageCode();
+
+	// Code we should use the first time the user logs in
+	var firstLoginCode = "1234";
+
+	// Code we should use the second time the user logs in
+	var secondLoginCode = "5678";
+
+	if (code === firstLoginCode) {
+		hideLoginPage(() => {
+			showSidenav();
+			showMain();
+		});
+		loadView("General Information");
+	} else if (code === secondLoginCode) {
+		hideLoginPage();
+		showSidenav();
+		showMain();
+		loadView("General Information");
+	}
+}
+
+function setupLoginPageLogic () {
+	var inputs = $("div.loginPage input");
+	var continueButton = $('div.loginPage button');
+
+	setUpEventListeners();
+	focusFirstDigit();
+
+	function setUpEventListeners () {
+		inputs[0].addEventListener("input", inputEvent => focusNextInputIfEntered(inputEvent, 1));
+		inputs[1].addEventListener("input", inputEvent => focusNextInputIfEntered(inputEvent, 2));
+		inputs[2].addEventListener("input", inputEvent => focusNextInputIfEntered(inputEvent, 3));
+		inputs[3].addEventListener("input", enteredLastCodeDigit);
+	}
+
+	function focusFirstDigit() {
+		inputs[0].focus();
+	}
+
+	function focusNextInputIfEntered (inputEvent, nextIndexToFocus) {
+		var inputValue = inputEvent.target.value;
+		var inputIsEmpty = inputValue === "";
+
+		if (!inputIsEmpty) {
+			inputs[nextIndexToFocus].focus();
+		}
+	}
+
+	function enteredLastCodeDigit () {
+		continueButton.focus();
+		continueButton[0].style.opacity = 1;
+		var code = getLoginPageCode();
+		console.log(code);
+	}
+}
+
+function getLoginPageCode () {
+	var inputs = $("div.loginPage input");
+	
+	var code = "";
+	code += inputs[0].value;
+	code += inputs[1].value;
+	code += inputs[2].value;
+	code += inputs[3].value;
+
+	return code;
 }
 
 function loadView( viewName ){
