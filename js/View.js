@@ -4,8 +4,13 @@ $( document ).ready(function() {
 	$('body').bootstrapMaterialDesign();
 
 	//Load this page on intialize
-	loadView("Medical History");
+	// showSidenav();
+	// loadView("Medical History");
 });
+
+function showSidenav () {
+	$("div.sidenav").show();
+}
 
 function loadView( viewName ){
 	$(".link").css("fontWeight","400");

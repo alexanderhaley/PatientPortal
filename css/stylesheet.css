@@ -89,6 +89,7 @@ h3 {
 
 /* The sidebar menu */
 .sidenav {
+	display: none;
 	height: 100%;
 	color:#FFF;
 	text-align:center;
