@@ -10,8 +10,8 @@ function showMain () {
 	$("div.main").show();
 }
 
-function hideLoginPage (callback) {
-	$("div.loginPage").fadeOut(300, callback);
+function hideLoginPage (loginPageHiddenCallback) {
+	$("div.loginPage").fadeOut(300, loginPageHiddenCallback);
 }
 
 function showSidenav () {
@@ -22,7 +22,7 @@ function showSidenav () {
  * We can choose what page to load based on what code the user enters
  */
 function clickedLoginContinue () {
-	var code = getLoginPageCode();
+	var codeEntered = getLoginPageCode();
 
 	// Code we should use the first time the user logs in
 	var firstLoginCode = "1234";
@@ -30,17 +30,29 @@ function clickedLoginContinue () {
 	// Code we should use the second time the user logs in
 	var secondLoginCode = "5678";
 
-	if (code === firstLoginCode) {
+	if (codeEntered === firstLoginCode) {
+		userLoggedInTheFirstTime();
+	} else if (codeEntered === secondLoginCode) {
+		userLoggedInSecondTime();
+	}
+
+	/**
+	 * Use this function to set the pages up the first time the user logs in
+	 */
+	function userLoggedInTheFirstTime () {
 		hideLoginPage(() => {
 			showSidenav();
 			showMain();
 		});
+
 		loadView("General Information");
-	} else if (code === secondLoginCode) {
-		hideLoginPage();
-		showSidenav();
-		showMain();
-		loadView("General Information");
+	}
+
+	/**
+	 * Use this function to set the pages up the second time the user logs in
+	 */
+	function userLoggedInSecondTime () {
+		userLoggedInTheFirstTime();
 	}
 }
 
@@ -73,9 +85,7 @@ function setupLoginPageLogic () {
 
 	function enteredLastCodeDigit () {
 		continueButton.focus();
-		continueButton[0].style.opacity = 1;
-		var code = getLoginPageCode();
-		console.log(code);
+		continueButton[0].style.opacity = "1";
 	}
 }
 
