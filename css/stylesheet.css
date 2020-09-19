@@ -227,6 +227,12 @@ input.chk-btn:checked + label {
   background: #145256 !IMPORTANT;
   color:#FFF !IMPORTANT;
 }
+input.size1 {
+	width: 30px !important;
+}
+input.size2 {
+	width: 60px !important;
+}
 .align-left {
 	text-align:left;
 	padding:10px;
@@ -235,4 +241,7 @@ input.chk-btn:checked + label {
 .cell input[type="checkbox"] {
 	margin-top:10px;
 }
-	
+
+.max-width {
+	width: 100%;
+}
