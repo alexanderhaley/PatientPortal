@@ -7,15 +7,15 @@ $( document ).ready(function() {
 });
 
 function showMain () {
-	$("div.main").show();
+	$("div.main").fadeIn(400);
 }
 
 function hideLoginPage (loginPageHiddenCallback) {
-	$("div.loginPage").fadeOut(300, loginPageHiddenCallback);
+	$("div.loginPage").fadeOut(400, loginPageHiddenCallback);
 }
 
 function showSidenav () {
-	$("div.sidenav").fadeIn();
+	$("div.sidenav").fadeIn(400);
 }
 
 /**
