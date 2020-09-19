@@ -89,6 +89,7 @@ h3 {
 
 /* The sidebar menu */
 .sidenav {
+	display: none;
 	height: 100%;
 	color:#FFF;
 	text-align:center;
@@ -112,6 +113,7 @@ h3 {
 .main {
   margin-left: 320px; /* Same as the width of the sidebar */
   padding: 20px;
+  display: none;
 }
 .section {
 	display:none;
@@ -244,4 +246,19 @@ input.size2 {
 
 .max-width {
 	width: 100%;
+}
+
+.loginPage img {
+	max-height: 100vh;
+}
+
+.loginPage input {
+	width: 2em;
+	margin: 10px;
+	text-align: center;
+}
+
+.loginPage button {
+	opacity: 0;
+	transition: opacity 300ms ease-in-out;
 }
