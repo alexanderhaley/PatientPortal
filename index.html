@@ -106,7 +106,7 @@
 			</div>
 			<div class="row">
 				<div class="cell">
-					<div class="openCircle"></div>
+					<div class="openCircle" id="familyMedicalHistory_circle"></div>
 				</div>
 				<div class="cell">
 					<button class="link" onclick="loadView(this.innerText);">
@@ -136,7 +136,7 @@
 			</div>
 			<div class="row">
 				<div class="cell">
-					<div class="openCircle"></div>
+					<div id="personalSafetyCircle" class="openCircle"></div>
 				</div>
 				<div class="cell">
 					<button class="link" onclick="loadView(this.innerText);">
@@ -594,6 +594,18 @@
 		</section>
 		<section class="section" id="familyMedicalHistory">
 			<h2>Family Medical History</h2>
+			<div class="centerSection">
+				<h3>Please check all that apply.</h3>
+				<p class="font-italic">Only includes parents, grandparents, siblings, and children.</p>
+				<div id="familyDiseases"></div>
+				<br>
+				<br>
+				<textarea class="form-control" placeholder="Other medical conditions"></textarea>
+			</div>
+			<div class="footer">
+				<button  type="button" class="button" onclick="loadView('Medical History')">Save and back to Medical History</button>
+				<button  type="button" class="button primary" onclick="loadView('Social History'); markAsSaved('Family Medical History')">Save and continue to Social History</button>
+			</div>
 		</section>
 		<section class="section" id="socialHistory">
 			<h2>Social History</h2>
@@ -807,6 +819,127 @@
 		</section>
 		<section class="section" id="personalSafety">
 			<h2>Personal Safety</h2>
+			<div class="centerSection" style="line-height: 1.5em;">
+				<div class="row">
+					<div class="col form-inline">
+						<p>Do you live alone?</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="liveAloneOptions">
+								No
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="liveAloneOptions">
+								Yes
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col form-inline">
+						<p>Do you have frequent falls?</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="fallsOptions">
+								No
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="fallsOptions">
+								Yes
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col form-inline">
+						<p>Do you have vision or hearing loss?</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="visionOrHearingOptions">
+								No
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="visionOrHearingOptions">
+								Yes
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col form-inline">
+						<p>How often do you have sun exposure?</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="sunExposureOptions">
+								Occassionally
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="sunExposureOptions">
+								Frequently
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="sunExposureOptions">
+								Rarely
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col form-inline">
+						<p>How often do you wear your seatbelt?</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="seatbeltOptions">
+								Occassionally
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="seatbeltOptions">
+								Frequently
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="seatbeltOptions">
+								Rarely
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col form-inline">
+						<p>Would you like to discuss any verbal or physical abuse with your provider?</p>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="verbalOrPhysicalAbuseOptions">
+								No
+							</label>
+						</div>
+						<div class="px-2">
+							<label class="radio-inline">
+								<input type="radio" name="verbalOrPhysicalAbuseOptions">
+								Yes
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<button  type="button" class="button" onclick="loadView('Social History')">Save and back to Social History</button>
+				<button  type="button" class="button primary" onclick="markAsSaved('Personal Safety')">You're all done!</button>
+			</div>
 		</section>
 		<section class="section" id="otherInformation">
 			<h2>Other Information</h2>

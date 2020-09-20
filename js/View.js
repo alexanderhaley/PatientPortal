@@ -129,6 +129,7 @@ function getLoginPageCode () {
 
 function loadView( viewName ){
 	$(".link").css("fontWeight","400");
+	window.scrollTo(0, 0)
 	$(".section").hide();
 	switch(viewName) {
 		case "Upcoming Appointments":
@@ -171,7 +172,6 @@ function markAllPagesAsSaved () {
 	markAsSaved("Family Medical History");
 	markAsSaved("Social History");
 	markAsSaved("Personal Safety");
-	markAsSaved("Other Information");
 }
 
 function markAsSaved(viewName){
@@ -274,3 +274,4 @@ function loadDiseases( id ){
 
  
 loadDiseases("yourDiseases");
+loadDiseases("familyDiseases");
