@@ -314,3 +314,11 @@ input.size2 {
 #upcommingAppointments div.centerSection.secondSignIn {
 	display: none;
 }
+
+.section#pastAppointments {
+	line-height: 1.5em;
+}
+
+i.material-icons {
+	vertical-align: bottom;
+}

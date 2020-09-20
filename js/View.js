@@ -154,6 +154,9 @@ function loadView( viewName ){
 		case "Other Information":
 			$("#otherInformation").show();
 			break;
+		case "Past Appointments":
+			$("#pastAppointments").show();
+			break;
 		default:
 			document.write("404 Page Not Found");
 	}
