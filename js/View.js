@@ -109,7 +109,7 @@ function userLoggedInTheFirstTime () {
 		unhideFirstUpcomingAppointmentsPage();
 	});
 
-	loadView("General Information");
+	loadView("Upcoming Appointments");
 }
 
 /**
