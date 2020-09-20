@@ -273,4 +273,14 @@ input.size2 {
 
 #upcommingAppointments textarea {
 	height: fill-available;
+	margin-top: 3em;
+}
+
+/**
+ * Hide both contents of the upcoming appointments so we can
+ * unhide them with jquery based on the code the user put in
+ */
+#upcommingAppointments div.centerSection.firstSignIn,
+#upcommingAppointments div.centerSection.secondSignIn {
+	display: none;
 }
