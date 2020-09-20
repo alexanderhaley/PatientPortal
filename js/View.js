@@ -26,6 +26,15 @@ function unhideSecondUpcomingAppointmentsPage () {
 	$("section#upcommingAppointments div.centerSection.secondSignIn").show();
 }
 
+function unhidePastAppointments () {
+	setupLastMenuItemWithUnderline();
+	$("div.sidenav div#navigation div.row.pastAppointments").css("display", "table-row");
+
+	function setupLastMenuItemWithUnderline () {
+		$("div.sidenav div#navigation div.row.otherInformation div.cell").addClass("buttonWithUnderline");
+	}
+}
+
 /**
  * We can choose what page to load based on what code the user enters
  */
@@ -43,32 +52,33 @@ function clickedLoginContinue () {
 	} else if (codeEntered === secondLoginCode) {
 		userLoggedInSecondTime();
 	}
+}
 
-	/**
-	 * Use this function to set the pages up the first time the user logs in
-	 */
-	function userLoggedInTheFirstTime () {
-		hideLoginPage(() => {
-			showSidenav();
-			showMain();
-			unhideFirstUpcomingAppointmentsPage();
-		});
+/**
+ * Use this function to set the pages up the first time the user logs in
+ */
+function userLoggedInTheFirstTime () {
+	hideLoginPage(() => {
+		showSidenav();
+		showMain();
+		unhideFirstUpcomingAppointmentsPage();
+	});
 
-		loadView("General Information");
-	}
+	loadView("General Information");
+}
 
-	/**
-	 * Use this function to set the pages up the second time the user logs in
-	 */
-	function userLoggedInSecondTime () {
-		hideLoginPage(() => {
-			showSidenav();
-			showMain();
-			unhideSecondUpcomingAppointmentsPage();
-		});
+/**
+ * Use this function to set the pages up the second time the user logs in
+ */
+function userLoggedInSecondTime () {
+	hideLoginPage(() => {
+		showSidenav();
+		showMain();
+		unhideSecondUpcomingAppointmentsPage();
+		unhidePastAppointments();
+	});
 
-		loadView("General Information");
-	}
+	loadView("General Information");
 }
 
 function setupLoginPageLogic () {

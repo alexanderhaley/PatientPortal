@@ -127,6 +127,11 @@ label.radio-inline input[type=radio]:checked~.bmd-radio:after {
 .sidenav button:hover {
 	text-decoration:underline;
 }
+/* Hide past appointments nav link so we can unhide it for second login */
+.sidenav div.pastAppointments {
+	display: none;
+}
+
 .main {
   margin-left: 320px; /* Same as the width of the sidebar */
   padding: 20px;
