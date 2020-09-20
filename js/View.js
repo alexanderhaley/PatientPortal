@@ -18,6 +18,14 @@ function showSidenav () {
 	$("div.sidenav").fadeIn(400);
 }
 
+function unhideFirstUpcomingAppointmentsPage () {
+	$("section#upcommingAppointments div.centerSection.firstSignIn").show();
+}
+
+function unhideSecondUpcomingAppointmentsPage () {
+	$("section#upcommingAppointments div.centerSection.secondSignIn").show();
+}
+
 /**
  * We can choose what page to load based on what code the user enters
  */
@@ -43,6 +51,7 @@ function clickedLoginContinue () {
 		hideLoginPage(() => {
 			showSidenav();
 			showMain();
+			unhideFirstUpcomingAppointmentsPage();
 		});
 
 		loadView("General Information");
@@ -52,7 +61,13 @@ function clickedLoginContinue () {
 	 * Use this function to set the pages up the second time the user logs in
 	 */
 	function userLoggedInSecondTime () {
-		userLoggedInTheFirstTime();
+		hideLoginPage(() => {
+			showSidenav();
+			showMain();
+			unhideSecondUpcomingAppointmentsPage();
+		});
+
+		loadView("General Information");
 	}
 }
 
