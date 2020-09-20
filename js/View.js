@@ -64,7 +64,7 @@ function userLoggedInTheFirstTime () {
 		unhideFirstUpcomingAppointmentsPage();
 	});
 
-	loadView("General Information");
+	loadView("Upcoming Appointments");
 }
 
 /**
@@ -78,7 +78,8 @@ function userLoggedInSecondTime () {
 		unhidePastAppointments();
 	});
 
-	loadView("General Information");
+	loadView("Upcoming Appointments");
+	markAllPagesAsSaved();
 }
 
 function setupLoginPageLogic () {
@@ -160,6 +161,17 @@ function loadView( viewName ){
 		default:
 			document.write("404 Page Not Found");
 	}
+}
+
+function markAllPagesAsSaved () {
+	markAsSaved("Upcoming Appointments");
+	markAsSaved("General Information");
+	markAsSaved("Personal Health History");
+	markAsSaved("Medical History");
+	markAsSaved("Family Medical History");
+	markAsSaved("Social History");
+	markAsSaved("Personal Safety");
+	markAsSaved("Other Information");
 }
 
 function markAsSaved(viewName){
