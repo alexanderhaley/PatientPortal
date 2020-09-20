@@ -31,7 +31,7 @@ function unhidePastAppointments () {
 	$("div.sidenav div#navigation div.row.pastAppointments").css("display", "table-row");
 
 	function setupLastMenuItemWithUnderline () {
-		$("div.sidenav div#navigation div.row.otherInformation div.cell").addClass("buttonWithUnderline");
+		$("div.sidenav div#navigation div.row.personalSafety div.cell").addClass("buttonWithUnderline");
 	}
 }
 
@@ -64,7 +64,7 @@ function userLoggedInTheFirstTime () {
 		unhideFirstUpcomingAppointmentsPage();
 	});
 
-	loadView("Upcoming Appointments");
+	loadView("General Information");
 }
 
 /**
@@ -172,6 +172,7 @@ function markAllPagesAsSaved () {
 	markAsSaved("Family Medical History");
 	markAsSaved("Social History");
 	markAsSaved("Personal Safety");
+	markAsSaved("Past Appointments");
 }
 
 function markAsSaved(viewName){
@@ -202,9 +203,9 @@ function markAsSaved(viewName){
 			$("#personalSafetyCircle").removeClass( "openCircle" );
 			$("#personalSafetyCircle").addClass( "selectedCircle" );
 			break;
-		case "Other Information":
-			$("#otherInformationCircle").removeClass( "openCircle" );
-			$("#otherInformationCircle").addClass( "selectedCircle" );
+		case "Past Appointments":
+			$("#pastAppointmentsCircle").removeClass( "openCircle" );
+			$("#pastAppointmentsCircle").addClass( "selectedCircle" );
 			break;
 	}
 }
