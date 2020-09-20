@@ -79,12 +79,29 @@ h3 {
 	margin-bottom:20px;
 	font-weight:700;
 }
+
+.main h1, h2, h3, h4, h5, p, input {
+	color: #043f42 !important;
+}
+
 /*BOOTSTRAP OVERRIDE */
 .table .bmd-form-group {
 	padding-top:0;
 }
 .table .table {
 	background:transparent
+}
+
+/* Radio button inner circle color */
+.radio label input[type=radio]:checked~.bmd-radio:before,
+label.radio-inline input[type=radio]:checked~.bmd-radio:before {
+	background-color: #043f42;
+}
+
+/* Radio button outer circle color */
+.radio label input[type=radio]:checked~.bmd-radio:after,
+label.radio-inline input[type=radio]:checked~.bmd-radio:after {
+	border-color: #043f42;
 }
 
 /* The sidebar menu */
@@ -184,6 +201,7 @@ h3 {
 }
 
 .centerSection {
+	border-radius: 10px;
 	max-width:860px;
 	background:#FFF;
 	margin:0 auto;
@@ -252,8 +270,15 @@ input.size2 {
 	max-height: 100vh;
 }
 
+.loginPage .passwordPrompt {
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 1em;
+}
+
 .loginPage input {
-	width: 2em;
+	width: 3em;
+	height: 3em;
 	margin: 10px;
 	text-align: center;
 }
