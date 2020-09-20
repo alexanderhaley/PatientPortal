@@ -35,6 +35,51 @@ function unhidePastAppointments () {
 	}
 }
 
+function getAllInputFields () {
+	var inputValues = $("div.main input").map((index, element) => {
+		if (element.type === "text" || element.type === "email" || element.type === "date") {
+			return {
+				type: element.type,
+				value: element.value
+			};
+		} else if (element.type === "radio" || element.type === "checkbox") {
+			return {
+				type: element.type,
+				checked: element.checked
+			};
+		}
+	});
+
+	return inputValues;
+}
+
+function loadInputValuesFromLocalStorage () {
+	var stringifiedInputValues = localStorage.getItem("inputValues");
+	var storedInputValues = JSON.parse(stringifiedInputValues);
+
+	$("div.main input").each((index, element) => {
+		if (element.type === "text" || element.type === "email" || element.type === "date") {
+			element.value = storedInputValues[index].value;
+
+			if (element.value !== "") {
+				var parentElement = element.parentElement;
+				if (parentElement.className.includes("bmd-form-group")) {
+					parentElement.classList.add("is-filled");
+				}
+			}
+		} else if (element.type === "radio" || element.type === "checkbox") {
+			element.checked = storedInputValues[index].checked;
+		}
+	});
+}
+
+function saveInputValuesToLocalStorage () {
+	var inputValues = $.makeArray(getAllInputFields());
+	var stringifiedInputValues = JSON.stringify(inputValues);
+
+	localStorage.setItem("inputValues", stringifiedInputValues);
+}
+
 /**
  * We can choose what page to load based on what code the user enters
  */
@@ -71,6 +116,7 @@ function userLoggedInTheFirstTime () {
  * Use this function to set the pages up the second time the user logs in
  */
 function userLoggedInSecondTime () {
+	loadInputValuesFromLocalStorage();
 	hideLoginPage(() => {
 		showSidenav();
 		showMain();
@@ -176,6 +222,7 @@ function markAllPagesAsSaved () {
 }
 
 function markAsSaved(viewName){
+	saveInputValuesToLocalStorage();
 	switch(viewName) {
 		case "Upcoming Appointments":
 			break;
